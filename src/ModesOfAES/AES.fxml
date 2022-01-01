@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="608.0" prefWidth="743.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ModesOfAES.MainController">
+   <children>
+      <Label layoutX="230.0" prefHeight="58.0" prefWidth="284.0" text=" WELCOME TO AES ONLINE TOOL" textFill="#dd0e0e">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <TextField fx:id="PlainText" layoutX="95.0" layoutY="65.0" prefHeight="79.0" prefWidth="638.0" promptText="Enter Plain Text Here" />
+      <Text layoutX="14.0" layoutY="111.0" strokeType="OUTSIDE" strokeWidth="0.0" text="PlainText" wrappingWidth="80.56640625">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Text>
+      <TextField fx:id="Key" layoutX="95.0" layoutY="167.0" prefHeight="32.0" prefWidth="385.0" promptText="Enter Key Text Here (less or 16 characters)" />
+      <Text layoutX="14.0" layoutY="190.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Key" wrappingWidth="80.56640625">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Text>
+      <Button layoutX="262.0" layoutY="203.0" mnemonicParsing="false" onAction="#EncryptButton" prefHeight="37.0" prefWidth="81.0" text="Encrypt">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Button>
+      <ComboBox fx:id="modes" layoutX="514.0" layoutY="167.0" prefHeight="32.0" prefWidth="150.0" promptText="Select Mode" />
+      <Label fx:id="PLabel" layoutX="95.0" layoutY="41.0" prefHeight="24.0" prefWidth="385.0" textFill="#d30c0c" />
+      <Label fx:id="CipherText" layoutX="91.0" layoutY="240.0" prefHeight="79.0" prefWidth="638.0" />
+      <Text layoutY="286.0" strokeType="OUTSIDE" strokeWidth="0.0" text="CipherText" wrappingWidth="107.56640625">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Text>
+      <Button layoutX="262.0" layoutY="448.0" mnemonicParsing="false" onAction="#DecryptButton" prefHeight="37.0" prefWidth="81.0" text="Decrypt">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Button>
+      <Label fx:id="plainText" layoutX="95.0" layoutY="485.0" prefHeight="79.0" prefWidth="638.0" />
+      <Text layoutY="531.0" strokeType="OUTSIDE" strokeWidth="0.0" text="PlainText" wrappingWidth="107.56640625">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Text>
+      <Label fx:id="IV" layoutX="8.0" layoutY="325.0" prefHeight="116.0" prefWidth="708.0" />
+      <Label fx:id="keyLabel" layoutX="95.0" layoutY="144.0" prefHeight="24.0" prefWidth="385.0" textFill="#d30c0c" />
+      <Label fx:id="modeLabel" layoutX="504.0" layoutY="144.0" prefHeight="24.0" prefWidth="229.0" textFill="#d30c0c" />
+   </children>
+</AnchorPane>
